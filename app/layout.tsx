@@ -1,21 +1,12 @@
 import type { Metadata } from "next"
-import { Geist_Mono, Inter } from "next/font/google"
 
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
-import { cn } from "@/lib/utils"
-
-const inter = Inter({ subsets: ["latin"], variable: "--font-sans" })
-
-const fontMono = Geist_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
-})
 
 export const metadata: Metadata = {
-  title: "awedding | Coming soon",
+  title: "awedding | Thiệp cưới 3D cao cấp",
   description:
-    "awedding đang hoàn thiện trải nghiệm thiệp cưới online và quản lý ngày cưới.",
+    "Website thiệp cưới 3D cao cấp với thiệp mở gập, chuyển động lãng mạn và trải nghiệm mời khách tối ưu trên mọi thiết bị.",
   icons: {
     icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
     shortcut: "/favicon.svg",
@@ -28,11 +19,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html
-      lang="vi"
-      suppressHydrationWarning
-      className={cn("antialiased", fontMono.variable, "font-sans", inter.variable)}
-    >
+    <html lang="vi" suppressHydrationWarning className="font-sans antialiased">
       <body>
         <ThemeProvider>{children}</ThemeProvider>
       </body>
